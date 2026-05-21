@@ -1,16 +1,43 @@
-# React + Vite
+Frontend - AI FAQ Chatbot
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the frontend application for the AI FAQ Chatbot project. It is built using React.js, Vite, Tailwind CSS, Axios, React Router, and Google OAuth.
 
-Currently, two official plugins are available:
+Technologies Used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React.js
+- Vite
+- Tailwind CSS
+- Axios
+- React Router DOM
+- Google OAuth
 
-## React Compiler
+Frontend Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Login page
+- Signup page
+- Continue with Google login
+- Protected chatbot page
+- ChatGPT-style chatbot UI
+- Dark mode and light mode
+- Chat history sidebar
+- New chat option
+- Delete chat option
+- Logout option
+- Responsive design
+- API integration with FastAPI backend
 
-## Expanding the ESLint configuration
+Folder Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```text
+frontend/
+├── src/
+│   ├── auth/
+│   ├── assets/
+│   ├── pages/
+│   ├── services/
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
+├── package.json
+├── vite.config.js
+└── README.md

@@ -1,11 +1,14 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.routes.chat_routes import router
+from app.database.db import Base, engine
+from app.models.chat_model import ChatHistory
+from app.models.user_model import User
+from app.routes.chat_routes import router as chat_router
+from app.routes.auth_routes import router as auth_router
 
 app = FastAPI()
 
-# Enable CORS
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -14,8 +17,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Include Routes
-app.include_router(router)
+Base.metadata.create_all(bind=engine)
+
+app.include_router(auth_router)
+app.include_router(chat_router)
 
 @app.get("/")
 def home():
