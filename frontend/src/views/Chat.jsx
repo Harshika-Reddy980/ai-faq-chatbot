@@ -436,4 +436,3 @@ function Chat() {
 export default Chat;
 
 
-chat .jsx
