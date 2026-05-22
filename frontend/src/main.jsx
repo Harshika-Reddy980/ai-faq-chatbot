@@ -11,9 +11,9 @@ import { GoogleOAuthProvider } from "@react-oauth/google";
 
 import "./index.css";
 
-import Login from "./Pages/Login";
-import Signup from "./Pages/Signup";
-import Chat from "./Pages/Chat";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+import Chat from "./pages/Chat";
 import ProtectedRoute from "./auth/ProtectedRoute";
 
 const GOOGLE_CLIENT_ID =
